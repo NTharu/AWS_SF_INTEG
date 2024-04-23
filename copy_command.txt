@@ -1,0 +1,6 @@
+copy into mydb.info.customers
+from @mydb.external_stages.aws_s3_csv
+file_format=file_formats.csv_fileformat
+pattern='.*customer.*'
+
+select * from mydb.info.customers

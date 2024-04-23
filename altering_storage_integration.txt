@@ -1,0 +1,2 @@
+alter storage integration s3_int
+set storage_allowed_locations=('s3://awss3tharun/csv/','s3://awss3tharun/pipes/csv/')

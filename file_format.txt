@@ -1,0 +1,6 @@
+create schema if not exists file_formats
+
+create or replace file format mydb.file_formats.csv_fileformat
+type=csv
+field_delimiter=','
+skip_header=1;

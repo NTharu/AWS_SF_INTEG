@@ -1,0 +1,11 @@
+create schema mydb.pipes
+
+create or replace pipe mydb.pipes.customer_pipe
+auto_ingest=true
+as
+copy into mydb.info.customers
+from @mydb.external_stages.aws_s3_csv
+file_format=file_formats.csv_fileformat
+pattern='.*customer.*'
+
+desc pipe customer_pipe
