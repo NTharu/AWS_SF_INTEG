@@ -1,0 +1,6 @@
+create schema if not exists mydb.external_stages
+
+create or replace stage mydb.external_stages.aws_s3_csv
+url='s3://loading-to-snowflake/csv/'
+storage_integration=s3_int
+file_format=mydb.file_formats.csv_fileformat

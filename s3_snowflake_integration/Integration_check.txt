@@ -1,0 +1,1 @@
+list @mydb.external_stages.aws_s3_csv

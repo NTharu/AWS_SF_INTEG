@@ -1,0 +1,9 @@
+create or replace storage integration s3_int
+type=external_stage
+storage_provider=s3
+enabled=true
+storage_aws_role_arn='arn:aws:iam::175075577551:role/aws-s3-sf-intg'
+storage_allowed_locations=('s3://loading-to-snowflake/csv/')
+comment='integration with s3 buckets';
+
+desc integration s3_int
